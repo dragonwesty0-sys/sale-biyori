@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>セール日和 | Amazon・楽天市場のセールとポイント還元カレンダー</title>
+<meta name="description" content="Amazonと楽天市場の主要セール・ポイント還元の開催日程を比較。エントリー条件や公式キャンペーンを日本時間でチェックできます。">
+<meta property="og:title" content="セール日和 | セールとポイント還元カレンダー">
+<meta property="og:description" content="Amazonと楽天市場の開催中・開催予定のキャンペーンを確認。">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="/style.css">
+<script type="module" src="/app.mjs"></script>
+</head>
+<body>
+<header class="top wrap"><a class="brand" href="/"><span aria-hidden="true">✳</span> セール日和</a><nav aria-label="ページ内"><a href="#calendar">イベント</a><a href="#notices">公式の告知</a></nav></header>
+<main class="wrap">
+<section class="hero">
+<div><p class="eyebrow">Amazon / 楽天市場</p><h1>セール・ポイント<br>還元カレンダー</h1><p>開催日とエントリー条件を、買い物の前にチェック。</p></div>
+<aside class="week" aria-label="今後7日間"><h2>今日から7日間</h2><p>開催予定も含めて比較できます。</p><div id="week" class="week-grid"></div><div id="week-summary" class="week-summary"></div></aside>
+</section>
+<section id="calendar">
+<div class="section-head"><div><h2>イベント一覧</h2><p>日付・時刻は日本時間です。</p></div><a class="reset" id="reset" href="#calendar" hidden>絞り込みを解除</a></div>
+<div class="filters" aria-label="イベントを絞り込む">
+<label>ショップ<select id="store"><option value="">すべて</option><option>Amazon</option><option>楽天市場</option></select></label>
+<label>種類<select id="kind"><option value="">すべて</option><option>セール</option><option>ポイント</option></select></label>
+<label>開催状況<select id="status"><option value="">開催中・開催予定</option><option value="live">開催中</option><option value="upcoming">開催予定</option><option value="ended">終了</option></select></label>
+</div>
+<p id="count" class="count" role="status"></p>
+<div class="cards" id="cards"></div>
+<noscript><p>イベントの表示にはJavaScriptが必要です。<a href="https://www.aboutamazon.jp/news/retail">Amazonの公式情報</a>と<a href="https://event.rakuten.co.jp/">楽天市場の公式情報</a>もご覧ください。</p></noscript>
+</section>
+<section id="notices"><div class="section-head"><div><h2>公式の告知</h2><p>開催日や条件が確定したイベントは、上の一覧で確認できます。</p></div></div>
+<div id="feed" class="feed" aria-live="polite"></div>
+<p><a href="https://www.aboutamazon.jp/news/retail">Amazon公式ニュース</a> <span aria-hidden="true">·</span> <a href="https://event.rakuten.co.jp/">楽天市場の特集・キャンペーン</a></p>
+</section>
+</main>
+<footer class="wrap"><strong>セール日和</strong><p>Amazon・楽天市場の非公式まとめです。特典の最終条件は各公式ページでご確認ください。</p></footer>
+</body>
+</html>
